@@ -1,0 +1,14 @@
+package Actions;
+
+import Pages.YourCartPage;
+
+import static Utils.ClickElements.clickByXpath;
+
+
+public class YourCartActions extends YourCartPage {
+
+    public void checkoutYourCart() {
+        clickByXpath(XPATH_BUTTON_CHECKOUT);
+    }
+
+}
