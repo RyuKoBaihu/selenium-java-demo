@@ -1,24 +1,28 @@
 package BrowserFactory;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
+
+import static BrowserFactory.DriverFactory.getDriver;
 
 public class Hook {
 
     private static WebDriver driver;
 
-    @BeforeAll
+    @Before
     public static void setUp() {
-        driver = DriverFactory.getDriver();
-        System.out.println("Navegador iniciado com sucesso!");
+        driver = getDriver();
+        System.out.println("Browser initialized");
     }
 
-    @AfterAll
+    @After
     public static void tearDown() {
         if (driver != null) {
             DriverFactory.quitDriver();
-            System.out.println("Navegador fechado com sucesso!");
+            System.out.println("Browser closed");
         }
     }
 }

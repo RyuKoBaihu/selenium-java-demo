@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         dryRun = false,
         features = {"src/test/resources/features"},
-        glue = {"StepDefinitions"},
+        glue = {"StepDefinitions","BrowserFactory"},
         monochrome = false,
         stepNotifications = true,
         tags ="@buy_item"

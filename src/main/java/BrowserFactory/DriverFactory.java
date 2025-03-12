@@ -17,19 +17,19 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            WebDriverManager.chromedriver().setup(); // Configura o WebDriver Manager para o ChromeDriver
+            WebDriverManager.chromedriver().setup();
 
-            // Inicializa o ChromeOptions para passar opções personalizadas ao Chrome
+            // Initialize Chrome options to set the SSL for tests
             ChromeOptions options = new ChromeOptions();
-            options.setAcceptInsecureCerts(true); // Aceita certificados SSL inseguros
+            options.setAcceptInsecureCerts(true);
 
-            // Cria o driver do Chrome com as opções configuradas
+            // Creates driver with ChromeDriver options
             driver = new ChromeDriver(options);
 
-            // Maximiza a janela do navegador
+            // Maximize window
             driver.manage().window().maximize();
 
-            // Configura o tempo de espera para encontrar os elementos
+            // Time to wait for the elements before timeout
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ELEMENT_TIMEOUT));
         }
         return driver;
@@ -37,12 +37,12 @@ public class DriverFactory {
 
     public static void quitDriver() {
         if (driver != null) {
-            driver.quit(); // Fecha o navegador
-            driver = null; // Limpa a instância do driver
+            driver.quit();
+            driver = null;
         }
     }
 
     public static WebDriverWait getWebDriverWait() {
-        return new WebDriverWait(getDriver(), Duration.ofSeconds(ELEMENT_TIMEOUT)); // 10 segundos de timeout
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(ELEMENT_TIMEOUT));
     }
 }
