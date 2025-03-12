@@ -5,8 +5,6 @@ import lombok.Getter;
 @Getter
 public class ProductsPage {
 
-    public final static String ID_INPUT_USERNAME = "user-name";
-    public final static String ID_INPUT_PASSWORD = "password";
-    public final static String ID_BUTTON_SUBMIT = "login-button";
-
+    public final static String XPATH_BUTTON_ADD_TO_CARD_BACKPACK = "//*[@id='inventory_container']/div/div[1]/div[3]/button";
+    public final static String ID_BUTTON_SHOPPING_CART = "shopping_cart_container";
 }
