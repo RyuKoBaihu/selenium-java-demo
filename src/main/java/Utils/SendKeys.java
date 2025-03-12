@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static BrowserFactory.DriverFactory.getDriver;
-import static BrowserFactory.DriverFactory.getWebDriverWait;
 
 public class SendKeys {
 
