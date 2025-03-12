@@ -17,4 +17,12 @@ public class ClickElements {
         element.click();
     }
 
+    public static void clickByXpath(String xpath){
+        DriverFactory.getWebDriverWait().until(ExpectedConditions.elementToBeClickable((By.xpath(xpath))));
+        WebElement element = getDriver().findElement(By.xpath(xpath));
+        element.click();
+    }
+
+
+
 }
