@@ -4,22 +4,23 @@ import Pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 
 import static BrowserFactory.DriverFactory.getDriver;
-import static StepDefinitions.GeneralSteps.ApplicationProperties.getUrl;
+import static StepDefinitions.GeneralSteps.ApplicationProperties.*;
+import static StepDefinitions.GeneralSteps.UserProperties.getPassword;
+import static StepDefinitions.GeneralSteps.UserProperties.getUsername;
 import static Utils.ClickElements.clickByID;
 import static Utils.SendKeys.sendKeysByID;
 
 
 public class LoginPageActions extends LoginPage {
 
-    public final static String USERNAME = "standard_user";
-    public final static String PASSWORD = "secret_sauce";
-
     WebDriver driver = getDriver();
-    String url = getUrl();
+    String URL = getUrl();
+    String USERNAME = getUsername();
+    String PASSWORD = getPassword();
 
     public void accessLoginPage() {
-        driver.get(url);
-        System.out.println("A URL obtida é: " + url);
+        driver.get(URL);
+        System.out.println("A URL obtida é: " + URL);
         sendKeysByID(USERNAME,ID_INPUT_USERNAME);
         sendKeysByID(PASSWORD,ID_INPUT_PASSWORD);
         clickByID(ID_BUTTON_SUBMIT);
