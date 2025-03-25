@@ -1,7 +1,7 @@
 package Actions;
 
 import Pages.FinishedOrderPage;
-import static Utils.Asserts.AssertEqualsXpath;
+import static Utils.AssertsUtils.AssertEqualsXpath;
 
 public class FinishedOrdersActions extends FinishedOrderPage {
 

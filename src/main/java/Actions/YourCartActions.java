@@ -2,7 +2,7 @@ package Actions;
 
 import Pages.YourCartPage;
 
-import static Utils.ClickElements.clickByXpath;
+import static Utils.ClickElementsUtils.clickByXpath;
 
 
 public class YourCartActions extends YourCartPage {

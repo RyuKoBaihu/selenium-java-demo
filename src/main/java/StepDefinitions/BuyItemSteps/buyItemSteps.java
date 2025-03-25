@@ -2,7 +2,6 @@ package StepDefinitions.BuyItemSteps;
 
 
 import Actions.*;
-import Pages.YourCartPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,7 +31,7 @@ public class buyItemSteps {
 
         @Then("I check if the order was finished")
         public void iCheckIfTheOrderWasFinished() {
-          finishedOrdersActions.confirmOrderFinished();
+            finishedOrdersActions.confirmOrderFinished();
         }
 
 }

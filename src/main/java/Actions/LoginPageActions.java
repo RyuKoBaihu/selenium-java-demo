@@ -7,8 +7,8 @@ import static BrowserFactory.DriverFactory.getDriver;
 import static StepDefinitions.GeneralSteps.ApplicationProperties.*;
 import static StepDefinitions.GeneralSteps.UserProperties.getPassword;
 import static StepDefinitions.GeneralSteps.UserProperties.getUsername;
-import static Utils.ClickElements.clickByID;
-import static Utils.SendKeys.sendKeysByID;
+import static Utils.ClickElementsUtils.clickByID;
+import static Utils.SendKeysUtils.sendKeysByID;
 
 
 public class LoginPageActions extends LoginPage {
@@ -20,7 +20,7 @@ public class LoginPageActions extends LoginPage {
 
     public void accessLoginPage() {
         driver.get(URL);
-        System.out.println("A URL obtida é: " + URL);
+        System.out.println("URL: " + URL);
         sendKeysByID(USERNAME,ID_INPUT_USERNAME);
         sendKeysByID(PASSWORD,ID_INPUT_PASSWORD);
         clickByID(ID_BUTTON_SUBMIT);

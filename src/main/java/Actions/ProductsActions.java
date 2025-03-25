@@ -1,14 +1,8 @@
 package Actions;
 
-import Pages.LoginPage;
 import Pages.ProductsPage;
-import org.openqa.selenium.WebDriver;
-
-import static BrowserFactory.DriverFactory.getDriver;
-import static StepDefinitions.GeneralSteps.ApplicationProperties.getUrl;
-import static Utils.ClickElements.clickByID;
-import static Utils.ClickElements.clickByXpath;
-import static Utils.SendKeys.sendKeysByID;
+import static Utils.ClickElementsUtils.clickByID;
+import static Utils.ClickElementsUtils.clickByXpath;
 
 
 public class ProductsActions extends ProductsPage {

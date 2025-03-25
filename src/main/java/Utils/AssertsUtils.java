@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static BrowserFactory.DriverFactory.getDriver;
 
-public class Asserts {
+public class AssertsUtils {
 
     public static void AssertEqualsXpath(String text_expected, String xpath) {
         DriverFactory.getWebDriverWait().until(ExpectedConditions.presenceOfElementLocated((By.xpath(xpath))));

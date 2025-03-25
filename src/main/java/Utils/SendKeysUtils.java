@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static BrowserFactory.DriverFactory.getDriver;
 
-public class SendKeys {
+public class SendKeysUtils {
 
     public static WebDriverWait wait;
 

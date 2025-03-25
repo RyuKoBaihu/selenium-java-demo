@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static BrowserFactory.DriverFactory.getDriver;
 
 
-public class ClickElements {
+public class ClickElementsUtils {
 
     public static void clickByID(String id){
         DriverFactory.getWebDriverWait().until(ExpectedConditions.elementToBeClickable((By.id(id))));
