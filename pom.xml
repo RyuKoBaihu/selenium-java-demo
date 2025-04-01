@@ -35,10 +35,6 @@
             <version>2.17.1</version> <!-- Versão estável do Log4j2 -->
         </dependency>
 
-
-
-
-
         <!-->Extent Report Cucumber Plugin<-->
         <dependency>
             <groupId>tech.grasshopper</groupId>
