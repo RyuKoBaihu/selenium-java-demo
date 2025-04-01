@@ -1,28 +1,28 @@
 package BrowserFactory;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 
 import static BrowserFactory.DriverFactory.getDriver;
 
 public class Hook {
-
+    private static final Logger logger = LogManager.getLogger(Hook.class);
     private static WebDriver driver;
 
     @Before
-    public static void setUp() {
+    public void setUp() {
         driver = getDriver();
-        System.out.println("Browser initialized");
+        logger.info("Browser initialized");
     }
 
     @After
-    public static void tearDown() {
+    public void tearDown() {
         if (driver != null) {
             DriverFactory.quitDriver();
-            System.out.println("Browser closed");
+            logger.info("Browser closed");
         }
     }
 }

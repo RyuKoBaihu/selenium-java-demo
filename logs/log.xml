@@ -1,0 +1,25 @@
+Using chromedriver 134.0.6998.165 (resolved driver for Chrome 134)
+Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\134.0.6998.165\chromedriver.exe
+Browser initialized
+Browser closed
+
+  <Event xmlns="http://logging.apache.org/log4j/2.0/events" timeMillis="1743526724474" thread="main" level="INFO" loggerName="io.github.bonigarcia.wdm.WebDriverManager" endOfBatch="false" loggerFqcn="org.apache.logging.slf4j.Log4jLogger" threadId="1" threadPriority="5">
+    <Instant epochSecond="1743526724" nanoOfSecond="474535200"/>
+    <Message>Using chromedriver 134.0.6998.165 (resolved driver for Chrome 134)</Message>
+  </Event>
+
+  <Event xmlns="http://logging.apache.org/log4j/2.0/events" timeMillis="1743526724560" thread="main" level="INFO" loggerName="io.github.bonigarcia.wdm.WebDriverManager" endOfBatch="false" loggerFqcn="org.apache.logging.slf4j.Log4jLogger" threadId="1" threadPriority="5">
+    <Instant epochSecond="1743526724" nanoOfSecond="560666500"/>
+    <Message>Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win64\134.0.6998.165\chromedriver.exe</Message>
+  </Event>
+
+  <Event xmlns="http://logging.apache.org/log4j/2.0/events" timeMillis="1743526725476" thread="main" level="INFO" loggerName="BrowserFactory.Hook" endOfBatch="false" loggerFqcn="org.apache.logging.log4j.spi.AbstractLogger" threadId="1" threadPriority="5">
+    <Instant epochSecond="1743526725" nanoOfSecond="476135700"/>
+    <Message>Browser initialized</Message>
+  </Event>
+
+  <Event xmlns="http://logging.apache.org/log4j/2.0/events" timeMillis="1743526728234" thread="main" level="INFO" loggerName="BrowserFactory.Hook" endOfBatch="false" loggerFqcn="org.apache.logging.log4j.spi.AbstractLogger" threadId="1" threadPriority="5">
+    <Instant epochSecond="1743526728" nanoOfSecond="234513800"/>
+    <Message>Browser closed</Message>
+  </Event>
+</Events>

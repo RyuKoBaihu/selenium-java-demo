@@ -23,17 +23,27 @@
             <version>5.1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version> <!-- Versão estável -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.17.1</version> <!-- Versão estável do Log4j2 -->
+        </dependency>
+
+
+
+
+
         <!-->Extent Report Cucumber Plugin<-->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.14.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version> <!-- Ou a versão mais recente -->
         </dependency>
 
         <!-- Commons lang -->
@@ -103,21 +113,11 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Dependência do SLF4J API -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.0-alpha1</version> <!-- Use a versão mais recente -->
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.13.3</version> <!-- Versão estável -->
         </dependency>
-
-        <!-- Dependência do SLF4J para log simples (caso queira usar) -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.0-alpha1</version> <!-- Use a versão compatível -->
-            <scope>test</scope>
-        </dependency>
-
 
 
     </dependencies>
