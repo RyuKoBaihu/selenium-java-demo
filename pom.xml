@@ -115,6 +115,11 @@
             <version>2.13.3</version> <!-- Versão estável -->
         </dependency>
 
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>3.4.4</version>
+        </dependency>
 
     </dependencies>
 

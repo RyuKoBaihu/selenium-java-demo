@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DriverFactory {
 
@@ -17,17 +19,28 @@ public class DriverFactory {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
 
-            // Initialize Chrome options to set the SSL for tests
+            // Inicializa opções do Chrome
             ChromeOptions options = new ChromeOptions();
             options.setAcceptInsecureCerts(true);
 
-            // Creates driver with ChromeDriver options
+            // Desativa o serviço de credenciais e o gerenciador de senhas do Chrome
+            Map<String, Object> prefs = new HashMap<>();
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
+            prefs.put("safebrowsing.enabled", false);
+            options.setExperimentalOption("prefs", prefs);
+
+            // Opcional: evita detecção de automação (não obrigatório, mas útil em alguns testes)
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.addArguments("--disable-features=PasswordLeakDetection");
+
+            // Cria o driver com as opções configuradas
             driver = new ChromeDriver(options);
 
-            // Maximize window
+            // Maximiza a janela
             driver.manage().window().maximize();
 
-            // Time to wait for the elements before timeout
+            // Tempo de espera implícito
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ELEMENT_TIMEOUT));
         }
         return driver;
