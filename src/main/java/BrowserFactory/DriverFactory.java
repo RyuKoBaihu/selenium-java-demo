@@ -31,6 +31,7 @@ public class DriverFactory {
             options.setExperimentalOption("prefs", prefs);
 
             // Opcional: evita detecção de automação (não obrigatório, mas útil em alguns testes)
+            options.addArguments("--incognito");
             options.addArguments("--disable-blink-features=AutomationControlled");
             options.addArguments("--disable-features=PasswordLeakDetection");
 
